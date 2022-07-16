@@ -92,5 +92,7 @@ func DeleteBook(w http.ResponseWriter, r *http.Request) {
 	book := models.DeleteBook(ID)
 	res, _ := json.Marshal(book)
 	w.Header().Set("Content-Type", "pkglication/json")
+	w.WriteHeader(http.StatusNoContent)
 	w.Write(res)
 }
+

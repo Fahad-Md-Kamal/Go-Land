@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+// func main() {
 // var m map[string]string
 // m := make(map[string]string)
 
@@ -22,6 +22,8 @@ func main() {
 
 // println("POPULATE map")
 // populateMapWithInitValues()
+
+func main() {
 
 	arr := []int{3, 4, 5, 6, 7}
 

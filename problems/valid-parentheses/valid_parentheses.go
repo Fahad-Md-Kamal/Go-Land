@@ -1,8 +1,4 @@
-package snq
-
-import (
-	"fmt"
-)
+package validparentheses
 
 func ValidParenthesis(s *string) bool {
     var stack []string
@@ -22,7 +18,6 @@ func ValidParenthesis(s *string) bool {
 				firstItem := stack[length]
 				stack = stack[:length]
 				if mapVal != firstItem{
-					fmt.Println("1st COND:\t", stack)
 					return false
 				}
 			}else{

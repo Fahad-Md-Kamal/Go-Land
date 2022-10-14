@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  postgres:
+    container_name: postgres_db
+    image: postgres
+    ports:
+      - "5432:5432"
+    # volumes:
+    #   - ./data/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=fiber_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    restart: always
+
+  # mysql:
+  #   image: mysql
+  #   container_name: mysql_db
+  #   cap_add:
+  #     - SYS_NICE
+  #   ports:
+  #     - "3306:3306"
+  #   volumes:
+  #     - ./data/mysql:/var/lib/mysql
+  #   environment:
+  #     - MYSQL_DATABASE=channels_db_dev
+  #     - MYSQL_ALLOW_EMPTY_PASSWORD=true
+  #     # - MYSQL_ROOT_PASSWORD=mevr1k1234
+  #   restart: always
+
+  # redis:
+  #   image: redis/redis-stack:latest
+  #   container_name: redis_server
+  #   environment:
+  #     - ALLOW_EMPTY_PASSWORD=yes
+  #   ports:
+  #   - '6379:6379'
